@@ -11,7 +11,7 @@ body {
     height: 100vh;
     width: 100%;
     display:flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     background-color: black;
   }
@@ -44,7 +44,7 @@ body {
   }
 
   .image{
-    height: 100%;
+    height: 100vh;
     width: auto;
     overflow:hidden;
   }
