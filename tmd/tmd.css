@@ -45,7 +45,7 @@ body {
 
   .image{
     height: 100vh;
-    width: auto;
+    width: 50vw;
     overflow:hidden;
   }
 
