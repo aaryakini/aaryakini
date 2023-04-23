@@ -39,7 +39,7 @@ body {
   .subhead{
     font-family: 'Schibsted Grotesk', sans-serif;
     color: white;
-    width: 50%;
+    width: 60%;
     font-size: 18px;
   }
 
@@ -52,10 +52,19 @@ body {
   #stuJour{
     overflow: hidden;
   }
+
+  .viz{
+    width:80%;
+    justify-content: center;
+    margin: 8px 0px 8px 60px;
+    border: solid black 1.5px;
+    border-radius: 30px;
+  }
   
   .article {
     font-family: 'Schibsted Grotesk', sans-serif;
     font-size: 20px;
+    line-height: 27px;
     position: relative;
     top: 110vh;
     margin: auto;
@@ -64,6 +73,7 @@ body {
   }
   a{
     color: #3f42db;
+    font-style: italic;
   }
 
   a:hover {
