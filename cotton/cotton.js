@@ -56,9 +56,17 @@ for(var i = 0; i < draggableElements.length; i++){
 
 function dragElement(element) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    element.addEventListener('touchstart', dragMouseDown);
-    element.addEventListener('touchmove', dragMouseDown);
+    // element.addEventListener('touchstart', dragMouseDown);
+    // element.addEventListener('touchmove', dragMouseDown);
     element.onmousedown = dragMouseDown;
+    element.addEventListener('touchmove', function(e) {
+        // grab the location of touch
+        var touchLocation = e.targetTouches[0];
+        
+        // assign box new coordinates based on the touch.
+        element.style.left = touchLocation.pageX + 'px';
+        element.style.top = touchLocation.pageY + 'px';
+      })
 
     function dragMouseDown(e) {
         e = e || window.event;
@@ -66,8 +74,11 @@ function dragElement(element) {
         // get the mouse cursor position at startup:
         pos3 = e.clientX;
         pos4 = e.clientY;
-        document.addEventListener('touchend', closeDragElement);
-        document.addEventListener('touchcancel', closeDragElement);
+        document.addEventListener('touchend', function(e) {
+            // current box position.
+            var x = parseInt(element.style.left);
+            var y = parseInt(element.style.top);
+          })
         document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
@@ -75,7 +86,7 @@ function dragElement(element) {
 
     function elementDrag(e) {
         e = e || window.event;
-        e.preventDefault();
+        e.preventDefault(); //this makes things break on mobile for some reason
         // calculate the new cursor position:
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
@@ -88,8 +99,6 @@ function dragElement(element) {
 
     function closeDragElement() {
         // stop moving when mouse button is released:
-        document.addEventListener('touchend', null);
-        document.addEventListener('touchcancel', null);
         document.onmouseup = null;
         document.onmousemove = null;
     }
