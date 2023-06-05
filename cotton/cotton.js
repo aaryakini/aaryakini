@@ -56,6 +56,8 @@ for(var i = 0; i < draggableElements.length; i++){
 
 function dragElement(element) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.addEventListener('touchstart', dragMouseDown);
+    element.addEventListener('touchmove', dragMouseDown);
     element.onmousedown = dragMouseDown;
 
     function dragMouseDown(e) {
@@ -64,6 +66,8 @@ function dragElement(element) {
         // get the mouse cursor position at startup:
         pos3 = e.clientX;
         pos4 = e.clientY;
+        document.addEventListener('touchend', closeDragElement);
+        document.addEventListener('touchcancel', closeDragElement);
         document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
@@ -84,6 +88,8 @@ function dragElement(element) {
 
     function closeDragElement() {
         // stop moving when mouse button is released:
+        document.addEventListener('touchend', null);
+        document.addEventListener('touchcancel', null);
         document.onmouseup = null;
         document.onmousemove = null;
     }
