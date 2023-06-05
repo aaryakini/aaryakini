@@ -102,7 +102,7 @@ img{
     }
 }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (max-width: 992px) {
     h1{
         width: 80%;
         font-size: 60px;
