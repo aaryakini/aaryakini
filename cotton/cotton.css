@@ -36,10 +36,8 @@ h1{
     width: 40%;
     text-align: center;
     font-size: 4vw;
-    line-height: 3.8vw;
-    letter-spacing: 2px;
+    line-height: 3.6vw;
     margin-bottom: 0px;
-    /* background-color: pink; */
 }
 
 p{
@@ -80,3 +78,51 @@ img{
     position: absolute;
     transform-origin: center;
 }
+
+@media screen and (max-width: 480px) {
+    h1{
+        width: 80%;
+        font-size: 36px;
+        line-height: 33px;
+    }
+    
+    p{
+        width: 70%;
+        font-size: 10.5px;
+    }
+    
+    .button{
+        top: 40px;
+        right: 30px;
+        font-size: 12px;
+    }
+
+    img{
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+  @media screen and (max-width: 1024px) {
+    h1{
+        width: 80%;
+        font-size: 60px;
+        line-height: 55px;
+    }
+    
+    p{
+        width: 70%;
+        font-size: 18px;
+    }
+    
+    .button{
+        top: 40px;
+        right: 40px;
+        font-size: 18px;
+    }
+
+    img{
+        width: 25vw;
+        height: 25vw;
+    }
+  }
