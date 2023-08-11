@@ -1,3 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Schibsted+Grotesk:wght@500&family=Zeyada&display=swap');
+
 body{
-    background-color: pink;
+    background-color: white;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+.header{
+    width: 100%;
+    font-family: 'Caprasimo', cursive;
+    font-size: 6vw;
+    line-height: 4.85vw;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    /* background-color: pink; */
+}
+
+.header p{
+    width: 70%;
+    margin: 50px 0px 50px 0px;
+}
+
+button {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    border-width: 2px 6px 6px 2px;
+    border-style: outset;
+
+}
+
+#testimonialContainer{
+    width: 95%;
+    margin: auto;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, 1fr);; */
+    place-items: stretch;
+    gap: 1vw 1vw;
+}
+
+.testimonial{
+    /* background-color: white; */
+    /* padding: 15px; */
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.269));
+}
+
+.info{
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 8px 20px;
+}
+
+.name{
+    font-family: 'Caprasimo', cursive;
+    font-size: 40px;
+    margin: 0px;
+    /* padding: 0px 0px 15px 0px; */
+}
+
+.relationship{
+    font-family: 'Caprasimo', cursive;
+    font-size: 25px;
+    margin: 0px 0px 8px 0px;
+}
+
+.testText{
+    font-family: 'Zeyada', cursive;
+    font-size: 25px;
+    margin-top: 0px;
+    padding: 5px 20px 12px 20px;
+}
+
+#template{
+    display: none;
+}
+
+footer{
+    width: 100vw;
+    height: auto;
+    margin: 0px;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    border-top: 2px dotted black;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 20px;
 }
