@@ -96,8 +96,18 @@ footer{
     /* position: fixed;
     bottom: 0px;
     left: 0px; */
+    background-color: white;
     margin-top: 100px;
     border-top: 2px dotted black;
     font-family: 'Schibsted Grotesk', sans-serif;
     font-size: 20px;
+}
+
+footer p{
+    margin: 5px;
+    padding: 0px;
+}
+
+footer button{
+    margin: 30px;
 }
