@@ -44,13 +44,15 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* grid-template-rows: repeat(4, 1fr);; */
-    place-items: stretch;
+    /* place-items: start start; */
     gap: 1vw 1vw;
 }
 
 .testimonial{
     /* background-color: white; */
     /* padding: 15px; */
+    width: 100%;
+    height: fit-content;
     border-radius: 4px;
     filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.269));
 }
@@ -76,6 +78,7 @@ button {
 .testText{
     font-family: 'Zeyada', cursive;
     font-size: 25px;
+    line-height: 28px;
     margin-top: 0px;
     padding: 5px 20px 12px 20px;
 }
@@ -90,9 +93,10 @@ footer{
     margin: 0px;
     padding: 20px 20px 40px 20px;
     text-align: center;
-    position: fixed;
+    /* position: fixed;
     bottom: 0px;
-    left: 0px;
+    left: 0px; */
+    margin-top: 100px;
     border-top: 2px dotted black;
     font-family: 'Schibsted Grotesk', sans-serif;
     font-size: 20px;
