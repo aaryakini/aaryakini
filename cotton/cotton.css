@@ -72,8 +72,8 @@ a:hover{
 
 
 img{
-    width: 20vw;
-    height: 20vw;
+    width: 3vw;
+    height: 3vh;
     position: absolute;
     transform-origin: center;
 }
