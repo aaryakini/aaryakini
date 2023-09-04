@@ -10,7 +10,7 @@
     <div class="container">
         <div class="header">
             <div class="instructions">
-                <p>hover on an image to know the story. each tells a different one.</p>
+                <p>hover on an image to know the story. each tells a different one.<br>also, some images might not load because of a timeout on the API call. sorry :/</p>
             </div>
             <div class="heading">
                 <p>aarya in images</p>
@@ -21,7 +21,9 @@
             <div class="tooltip" id="template">
                 <div class="tooltiptext">
                     <p class="title"></p>
-                    <p class="source"></p>
+                    <p id="sourceContainer">
+                        <a id="source" href="" target="_blank"></a>
+                    </p>
                     <p class="desc"></p>
                 </div>
                 <img class="image" src="">
@@ -29,7 +31,6 @@
         </div>
         <script src="airtable.browser.js"></script>
         <script type="text/javascript" src="index.js"></script>
-        <!-- <script type="text/javascript" src="draggable.js"></script> -->
 
     </div>
 </body>
