@@ -78,12 +78,12 @@ const promise = new Promise((resolve, reject) => {
     });
 
     function getPosX(){
-    let posX = Math.floor(Math.random() * ((window.innerWidth - 30) - 30) + 30);
+    let posX = Math.floor(Math.random() * ((window.innerWidth - 100) - 30) + 30);
     return posX + "px";
     }
 
     function getPosY(){
-        let posY = Math.floor(Math.random() * ((window.innerHeight*2 - 30) - 30) + 30);
+        let posY = Math.floor(Math.random() * ((window.innerHeight*2 - 100) - 30) + 30);
         return posY + "px";
     }  
     
