@@ -1,5 +1,6 @@
 let template = document.getElementById("template");
 let container = document.getElementById("items");
+let counter = 257;
 
 const promise = new Promise((resolve, reject) => {
     var Airtable = require('airtable');
@@ -18,11 +19,14 @@ const promise = new Promise((resolve, reject) => {
             container.appendChild(templateCopy);
 
             templateCopy.querySelector(".title").append(record.get('name'));
-            templateCopy.querySelector('img').src = record.get('photo')[0].url;
+            templateCopy.querySelector('img').src = record.get('photo')[0].url; //i don't remember what the exact airtable object looks like for an attachment, 
+                                                                                //but future aarya if you are referencing this code, you did this for a reason, and tested it.
+                                                                                //the array reference to the first item is necessary to get the url, so ignore the uncaught TypeError
+                                                                                //the code should work without resolving that.
             if (record.get('category') == "desi"){
                 templateCopy.querySelector(".image").setAttribute("style", "-webkit-filter: drop-shadow(0px 0px 5px goldenrod);");
 
-            }else if (record.get('category') == "trash"){
+            }else if (record.get('category') == "me"){
                 templateCopy.querySelector(".image").setAttribute("style", "-webkit-filter: drop-shadow(0px 0px 5px hotpink);");
 
             }else if (record.get('category') == "kathak"){
@@ -34,7 +38,7 @@ const promise = new Promise((resolve, reject) => {
             }else if (record.get('category') == "labor"){
                 templateCopy.querySelector(".image").setAttribute("style", "-webkit-filter: drop-shadow(0px 0px 5px blue);");
 
-            }else if (record.get('category') == "misc"){
+            }else if (record.get('category') == "nyc"){
                 templateCopy.querySelector(".image").setAttribute("style", "-webkit-filter: drop-shadow(0px 0px 5px chartreuse);");
 
             }else if (record.get('category') == "family"){
@@ -100,6 +104,9 @@ promise
 
 
   function dragElement(elmnt) {
+    elmnt.setAttribute.zIndex = counter;
+    counter++;
+    console.log(counter);
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (document.getElementById(elmnt.id + "header")) {
       // if present, the header is where you move the DIV from:
