@@ -143,6 +143,7 @@ body{
 
 .photo img:hover{
     filter: none;
+    cursor: url("assets/mouse.png"), pointer;
 }
 
 .tooltip .tooltiptext {
