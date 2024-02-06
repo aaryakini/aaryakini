@@ -1,0 +1,145 @@
+/* Importing fonts */
+@import url("https://use.typekit.net/ets2pxa.css");
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
+
+@font-face {
+    font-family:'Jubilee';
+    src: url('fonts/jubilee/otjubilee-diamond.woff') format('woff'),
+         url('fonts/jubilee/otjubilee-diamond.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/********************/
+
+
+body{
+    overflow-x: hidden;
+    background-color: #121212;
+}
+
+.headerContainer{
+    height: 100vh;
+    /* background-color: pink; */
+}
+
+.header{
+    font-family: 'Jubilee';
+    text-transform: uppercase;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 4vh;
+    color: whitesmoke;
+}
+
+#first{
+    font-size: 6.2vw;
+    margin: 0%;
+    padding: 0%;
+    line-height: 6.2vw;
+}
+
+#second{
+    font-size: 14vw;
+    margin: 0px;
+    padding: 0px;
+    line-height: 10vw;
+}
+
+.content{
+    height: fit-content;
+    padding-bottom: 150px;
+    margin-bottom: 0px;
+    width: 100vw;
+    font-family: "scotch-text-condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:calc(12px + 0.3vw);
+    position: relative;
+    background-color: whitesmoke;
+}
+
+.item{
+    height: 55vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    /* background-color: pink; */
+}
+
+.photo{
+    width: 50vw;
+    position: relative;
+    height: 38vh;
+    /* background-color: papayawhip; */
+}
+
+.photo img{
+    filter: grayscale();
+}
+
+.itemTitle{
+    font-size: calc(20px + 0.5vw);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.text{
+    width: 50vw;
+    position: relative;
+}
+
+.textA p{
+    width: 22vw;
+    position: absolute;
+    left: 3vw;
+    /* background-color: aquamarine; */
+}
+
+.photoA img{
+    max-width: 45vw;
+    max-height: 50vh;
+    position: absolute;
+    right: 0px;
+}
+
+.textB p{
+    width: 22vw;
+    position: absolute;
+    right: 3vw;
+    /* background-color: aquamarine; */
+}
+
+.photoB img{
+    max-width: 45vw;
+    max-height: 50vh;
+    position: absolute;
+    left: 0px;
+}
+
+.photo img:hover{
+    filter: none;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 20vw;
+    background-color: lightgoldenrodyellow;
+    color: #121212;
+    border: 1px solid #121212;
+    font-family: 'Xanh Mono', monospace;
+    font-size: 13px;
+    overflow-wrap: break-word;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -15%;
+    z-index: 100000;
+}
+
+.tooltip .tooltiptext p{
+    text-align: left;
+    width: 90%;
+    margin: 10px 15px;
+    padding-bottom: 3px;
+}
