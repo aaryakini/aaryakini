@@ -92,14 +92,12 @@ body{
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
-    /* background-color: pink; */
 }
 
 .photo{
     width: 50vw;
     position: relative;
     height: 38vh;
-    /* background-color: papayawhip; */
 }
 
 .photo img{
@@ -121,7 +119,6 @@ body{
     width: 22vw;
     position: absolute;
     left: 3vw;
-    /* background-color: aquamarine; */
 }
 
 .photoA img{
@@ -135,7 +132,6 @@ body{
     width: 22vw;
     position: absolute;
     right: 3vw;
-    /* background-color: aquamarine; */
 }
 
 .photoB img{
