@@ -15,11 +15,16 @@
 body{
     overflow-x: hidden;
     background-color: #121212;
+    box-sizing: border-box;
 }
 
 .headerContainer{
     height: 100vh;
-    /* background-color: pink; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
 }
 
 .header{
@@ -27,8 +32,9 @@ body{
     text-transform: uppercase;
     width: 100vw;
     text-align: center;
-    margin-bottom: 4vh;
     color: whitesmoke;
+    margin: 0px;
+    padding: 0px;
 }
 
 #first{
@@ -45,6 +51,27 @@ body{
     line-height: 10vw;
 }
 
+.subtitle{
+    font-family: "scotch-text-condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:calc(12px + 0.3vw);
+    color: whitesmoke;
+    margin: 0px 2vw 2vw 2vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#one{
+   width: 18vw;
+}
+
+#two{
+    width: 25vw;
+    margin-right: 1vw;
+ }
+
 .content{
     height: fit-content;
     padding-bottom: 150px;
@@ -55,6 +82,7 @@ body{
     font-style: normal;
     font-size:calc(12px + 0.3vw);
     position: relative;
+    margin: auto;
     background-color: whitesmoke;
 }
 
@@ -128,13 +156,13 @@ body{
     color: #121212;
     border: 1px solid #121212;
     font-family: 'Xanh Mono', monospace;
-    font-size: 13px;
+    font-size: 0.8vw;
     overflow-wrap: break-word;
     position: absolute;
-    bottom: 50%;
+    bottom: 0%;
     left: 50%;
     margin-left: -15%;
-    z-index: 100000;
+    z-index: 2;
 }
 
 .tooltip .tooltiptext p{
@@ -142,4 +170,27 @@ body{
     width: 90%;
     margin: 10px 15px;
     padding-bottom: 3px;
+}
+
+.footer{
+    background-color: #121212;
+    font-family: "scotch-text-condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:calc(10px + 0.3vw);
+    color: whitesmoke;
+    text-align: center;
+    width: 100vw;
+    margin: 15vh 0vw 5vh 0vw;
+}
+
+.footer p{
+    /* position: absolute; */
+    width: 35vw;
+    position: relative;
+    margin: auto;
+}
+
+.footer a{
+    color: whitesmoke;
 }
